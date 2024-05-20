@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_work_order_form" model="ir.ui.view">
+        <field name="name">Work Order Form</field>
+        <field name="model">car_workshop.work_order</field>
+        <field name="arch" type="xml">
+            <form string="Work Order">
+                <sheet>
+                    <group>
+                        <field name="order_number" />
+                        <field name="customer_id" />
+                        <field name="vehicle_id" />
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        <field name="state" />
+                        <field name="description" />
+                        <field name="vehicle_image" widget="image" />
+                    </group>
+                    <notebook>
+                        <page string="Products">
+                            <field name="product_ids">
+                                <tree string="Products">
+                                    <field name="name" />
+                                    <field name="list_price" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_work_order_tree" model="ir.ui.view">
+        <field name="name">Work Order Tree</field>
+        <field name="model">car_workshop.work_order</field>
+        <field name="arch" type="xml">
+            <tree string="Work Orders">
+                <field name="order_number" />
+                <field name="customer_id" />
+                <field name="vehicle_id" />
+                <field name="start_date" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_work_order" model="ir.actions.act_window">
+        <field name="name">Work Orders</field>
+        <field name="res_model">car_workshop.work_order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new work order.
+            </p>
+        </field>
+    </record>
+</odoo>

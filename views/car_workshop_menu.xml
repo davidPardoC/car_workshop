@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="mechanic_workshop_menu_root" name="Car Workshop" sequence="1" />
+
+    <menuitem id="menu_mechanic_workshop_management" name="Workshop Management"
+        parent="mechanic_workshop_menu_root" sequence="2" />
+
+    <menuitem id="menu_work_order" name="Work Orders" parent="menu_mechanic_workshop_management"
+        action="action_work_order" sequence="3" />
+</odoo>
