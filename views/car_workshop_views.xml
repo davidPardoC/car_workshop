@@ -8,15 +8,20 @@
             <form string="Work Order">
                 <sheet>
                     <group>
-                        <field name="order_number" />
-                        <field name="customer_id" />
-                        <field name="vehicle_id" />
-                        <field name="start_date" />
-                        <field name="end_date" />
-                        <field name="state" />
-                        <field name="description" />
-                        <field name="vehicle_image" widget="image" />
+                        <group>
+                            <field name="order_number" />
+                            <field name="customer_id" />
+                            <field name="vehicle_id" />
+                            <field name="start_date" />
+                            <field name="end_date" />
+                            <field name="state" />
+                            <field name="description" />
+                        </group>
+                        <group>
+                            <field name="vehicle_image" widget="image" />
+                        </group>
                     </group>
+
                     <notebook>
                         <page string="Products">
                             <field name="product_ids">

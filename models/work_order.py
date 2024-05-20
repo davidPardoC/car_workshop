@@ -19,7 +19,7 @@ class WorkOrder(models.Model):
     state = fields.Selection([
         ('draft', 'Received'),
         ('in_progress', 'In Progress'),
-        ('in_progress', 'Waiting for Parts'),
+        ('waiting_for_parts', 'Waiting for Parts'),
         ('done', 'Done'),
     ], string='Status', default='draft')
     description = fields.Text('Description')
